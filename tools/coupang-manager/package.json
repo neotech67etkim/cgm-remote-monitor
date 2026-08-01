@@ -1,0 +1,14 @@
+{
+  "name": "coupang-manager",
+  "version": "1.0.0",
+  "private": true,
+  "description": "쿠팡 Open API 기반 다중 판매자 계정 반품/정산 관리 웹 대시보드",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

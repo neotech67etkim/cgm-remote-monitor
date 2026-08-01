@@ -1,0 +1,14 @@
+[
+  {
+    "name": "스토어1",
+    "vendorId": "A00012345",
+    "accessKey": "발급받은-access-key",
+    "secretKey": "발급받은-secret-key"
+  },
+  {
+    "name": "스토어2",
+    "vendorId": "A00067890",
+    "accessKey": "발급받은-access-key",
+    "secretKey": "발급받은-secret-key"
+  }
+]

@@ -5,7 +5,6 @@
   "description": "쿠팡 WING / 네이버 스마트스토어센터 판매자 관리 페이지에서 정산 정보 등을 주기적으로 수집하는 도구",
   "main": "src/index.js",
   "scripts": {
-    "login:coupang": "node src/login.js coupang",
     "login:naver": "node src/login.js naver",
     "run": "node src/index.js",
     "schedule": "node src/scheduler.js"

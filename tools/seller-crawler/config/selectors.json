@@ -1,23 +1,5 @@
 {
-  "_readme": "실제 로그인 후 페이지의 DOM 구조를 크롬 개발자도구(F12)로 확인하고 아래 셀렉터 값을 채워 넣으세요. 페이지 개편에 따라 셀렉터가 바뀔 수 있으니 주기적으로 점검이 필요합니다.",
-
-  "coupang": {
-    "pages": [
-      {
-        "name": "settlement",
-        "comment": "정산 예정/입금 내역 페이지. WING > 정산관리 메뉴에서 URL과 셀렉터를 확인해 채우세요.",
-        "url": "https://wing.coupang.com/REPLACE_WITH_SETTLEMENT_PAGE_PATH",
-        "waitForSelector": "REPLACE_WITH_A_SELECTOR_THAT_APPEARS_WHEN_LOADED",
-        "type": "table",
-        "rowSelector": "REPLACE_WITH_TABLE_ROW_SELECTOR",
-        "columns": {
-          "정산예정일": "REPLACE_WITH_CELL_SELECTOR",
-          "정산금액": "REPLACE_WITH_CELL_SELECTOR",
-          "상태": "REPLACE_WITH_CELL_SELECTOR"
-        }
-      }
-    ]
-  },
+  "_readme": "네이버 스마트스토어센터는 공식 오픈 API 정보가 아직 없어 브라우저 스크래핑 방식을 유지합니다. 로그인 후 페이지의 DOM 구조를 크롬 개발자도구(F12)로 확인하고 아래 셀렉터 값을 채워 넣으세요. 쿠팡은 공식 Open API(정산 지급내역조회)를 사용하므로 별도 셀렉터가 필요 없습니다 (src/platforms/coupang-api.js 참고).",
 
   "naver": {
     "pages": [

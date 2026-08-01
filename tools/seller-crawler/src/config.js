@@ -10,6 +10,19 @@ function parsePlatforms () {
     .filter(Boolean);
 }
 
+function currentYearMonthUTC () {
+  const now = new Date();
+  return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`;
+}
+
+function parseSettlementMonths () {
+  const raw = process.env.COUPANG_SETTLEMENT_MONTHS;
+  if (raw) {
+    return raw.split(',').map((m) => m.trim()).filter(Boolean);
+  }
+  return [currentYearMonthUTC()];
+}
+
 module.exports = {
   platforms: parsePlatforms(),
   headless: process.env.HEADLESS !== 'false',
@@ -19,7 +32,12 @@ module.exports = {
   timezone: process.env.TZ || 'Asia/Seoul',
   selectors,
   loginUrls: {
-    coupang: process.env.COUPANG_LOGIN_URL,
     naver: process.env.NAVER_LOGIN_URL
+  },
+  coupangApi: {
+    accessKey: process.env.COUPANG_ACCESS_KEY,
+    secretKey: process.env.COUPANG_SECRET_KEY,
+    vendorId: process.env.COUPANG_VENDOR_ID,
+    settlementMonths: parseSettlementMonths()
   }
 };
